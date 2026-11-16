@@ -1,0 +1,39 @@
+# Агентская память (локальная, не для репозитория)
+.for_agent/
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+.venv.bak/
+
+# Секреты и конфиги с токенами
+.env
+.env.local
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+dist/
+build/
+
+# Офисные файлы (блокировки LibreOffice и временные файлы)
+.~lock.*
+.~lock.*#
+~$*
+*.docx#
+
+# Системный мусор
+.DS_Store
+Thumbs.db
+desktop.ini
