@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VENV_DIR = os.path.join(BASE_DIR, ".venv")
 
 # Пакет -> модуль для проверки импортом
-DEPS = [("requests", "requests")]
+DEPS = [("requests", "requests"), ("pandas", "pandas"), ("pyarrow", "pyarrow")]
 
 
 def venv_python():

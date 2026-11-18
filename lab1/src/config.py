@@ -34,5 +34,12 @@ DATE_TO = _get("DATE_TO")
 
 POSTS_PER_REQUEST = _get_int("POSTS_PER_REQUEST", 100)
 
+# Формат вывода: json | parquet | both
+OUTPUT_FORMAT = os.environ.get("OUTPUT_FORMAT", "json").strip().lower() or "json"
+if OUTPUT_FORMAT not in ("json", "parquet", "both"):
+    raise RuntimeError(
+        f"OUTPUT_FORMAT={OUTPUT_FORMAT!r}: допустимо json | parquet | both"
+    )
+
 # Куда сохранить результат
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")

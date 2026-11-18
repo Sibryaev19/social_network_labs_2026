@@ -1,0 +1,4 @@
+#!/bin/bash
+# Настройка окружения лабораторной 1 на Linux (разово перед запуском)
+cd "$(dirname "$0")" || exit 1
+python3 setup/setup.py

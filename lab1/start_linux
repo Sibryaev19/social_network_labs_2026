@@ -1,9 +1,10 @@
 #!/bin/bash
-# Запуск лабораторной 1 на Linux
+# Запуск лабораторной 1 на Linux (окружение создаётся отдельно: python3 setup/setup.py)
 cd "$(dirname "$0")" || exit 1
 
 if [ ! -x ".venv/bin/python" ]; then
-    python3 setup/setup.py || exit 1
+    echo "Нет .venv — сначала выполните: python3 setup/setup.py" >&2
+    exit 1
 fi
 
 .venv/bin/python start.py "$@"
